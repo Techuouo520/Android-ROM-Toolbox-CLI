@@ -1,0 +1,16 @@
+{
+  "version": 5,
+  "include": ["base.json"],
+  "configurePresets": [
+    {
+      "name": "linux-amd64",
+      "displayName": "Linux x86-64 (native build on an x86-64 host)",
+      "inherits": "base",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Linux" },
+      "cacheVariables": { "ARTB_TARGET": "linux_amd64" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "linux-amd64", "configurePreset": "linux-amd64", "targets": ["artb"] }
+  ]
+}

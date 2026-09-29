@@ -1,0 +1,16 @@
+{
+  "version": 5,
+  "include": ["base.json"],
+  "configurePresets": [
+    {
+      "name": "windows-arm64",
+      "displayName": "Windows ARM64 (llvm-mingw cross build)",
+      "inherits": "base",
+      "toolchainFile": "${sourceDir}/cmake/toolchains/windows-arm64.cmake",
+      "cacheVariables": { "ARTB_TARGET": "windows_arm64" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "windows-arm64", "configurePreset": "windows-arm64", "targets": ["artb"] }
+  ]
+}

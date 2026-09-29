@@ -1,0 +1,15 @@
+#pragma once
+
+#include <stream.hpp>
+
+#include "format.hpp"
+
+filter_strm_ptr get_encoder(format_t type, stream_ptr &&base);
+
+filter_strm_ptr get_decoder(format_t type, stream_ptr &&base);
+
+bool compress_lz4_legacy(format_t type, int fd, const void *in, size_t size);
+
+void compress(const char *method, const char *infile, const char *outfile);
+
+void decompress(char *infile, const char *outfile);

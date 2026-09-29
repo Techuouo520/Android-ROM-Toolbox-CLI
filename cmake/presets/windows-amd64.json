@@ -1,0 +1,16 @@
+{
+  "version": 5,
+  "include": ["base.json"],
+  "configurePresets": [
+    {
+      "name": "windows-amd64",
+      "displayName": "Windows x86-64 (MSYS2 UCRT64 Clang)",
+      "inherits": "base",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Windows" },
+      "cacheVariables": { "CMAKE_C_COMPILER": "clang", "CMAKE_CXX_COMPILER": "clang++", "ARTB_TARGET": "windows_amd64" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "windows-amd64", "configurePreset": "windows-amd64", "targets": ["artb"] }
+  ]
+}

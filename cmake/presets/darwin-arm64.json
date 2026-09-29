@@ -1,0 +1,16 @@
+{
+  "version": 5,
+  "include": ["base.json"],
+  "configurePresets": [
+    {
+      "name": "darwin-arm64",
+      "displayName": "macOS ARM64 (Apple Clang, macOS 15+)",
+      "inherits": "base",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Darwin" },
+      "cacheVariables": { "ARTB_STATIC_NATIVE": "OFF", "ARTB_TARGET": "darwin_arm64" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "darwin-arm64", "configurePreset": "darwin-arm64", "targets": ["artb"] }
+  ]
+}

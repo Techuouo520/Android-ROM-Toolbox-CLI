@@ -1,0 +1,13 @@
+{
+  "version": 5,
+  "cmakeMinimumRequired": { "major": 3, "minor": 24, "patch": 0 },
+  "include": [
+    "cmake/presets/host.json",
+    "cmake/presets/windows-amd64.json",
+    "cmake/presets/windows-arm64.json",
+    "cmake/presets/linux-amd64.json",
+    "cmake/presets/linux-arm64.json",
+    "cmake/presets/android-arm64.json",
+    "cmake/presets/darwin-arm64.json"
+  ]
+}

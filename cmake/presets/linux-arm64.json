@@ -1,0 +1,16 @@
+{
+  "version": 5,
+  "include": ["base.json"],
+  "configurePresets": [
+    {
+      "name": "linux-arm64",
+      "displayName": "Linux ARM64 (native build on an ARM64 host)",
+      "inherits": "base",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Linux" },
+      "cacheVariables": { "ARTB_TARGET": "linux_arm64" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "linux-arm64", "configurePreset": "linux-arm64", "targets": ["artb"] }
+  ]
+}

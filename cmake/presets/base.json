@@ -1,0 +1,21 @@
+{
+  "version": 5,
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "ARTB_BUILD_ANDROID_TOOLS": "ON",
+        "ARTB_BUILD_EROFS_TOOLS": "ON",
+        "ARTB_BUILD_EXT4_TOOLS": "ON",
+        "ARTB_BUILD_F2FS_TOOLS": "ON",
+        "ARTB_BUILD_BOOT_TOOLS": "ON",
+        "ARTB_BUILD_BUNDLE": "ON",
+        "ARTB_STATIC_NATIVE": "ON"
+      }
+    }
+  ]
+}

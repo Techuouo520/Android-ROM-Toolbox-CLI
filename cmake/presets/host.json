@@ -1,0 +1,15 @@
+{
+  "version": 5,
+  "include": ["base.json"],
+  "configurePresets": [
+    {
+      "name": "host",
+      "displayName": "Build for this machine",
+      "inherits": "base",
+      "cacheVariables": { "ARTB_NATIVE_ONLY": "ON", "ARTB_STATIC_NATIVE": null }
+    }
+  ],
+  "buildPresets": [
+    { "name": "host", "configurePreset": "host", "targets": ["artb"] }
+  ]
+}

@@ -1,0 +1,9 @@
+/build/
+/dist/
+/download/
+/toolchains/
+/internal/nativebin/files/
+/xz/*.syso
+/AGENTS.md
+/schedule.md
+/Error.md
